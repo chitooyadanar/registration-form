@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<style>
+    body {
+        background-color: brown;
+        color: white;
+
+    }
+</style>
+
+<body>
+    <h2>Welcome Hokkaido Thingyan Festival 2025</h2>
+    <form id="regForm">
+        <label>Date: <input type="date" name="date"></label><br><br>
+        <label>Name: <input type="text" name="name" required></label><br><br>
+        <label>Gender:
+            <select name="gender" required>
+                <option value="">Select</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+        </label><br><br>
+        <label>Phone: <input type="text" name="phone" required></label><br><br>
+        <label>Email: <input type="email" name="email" required></label><br><br>
+        <label>Address: <input type="text" name="address"></label><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="msg"></p>
+
+    <script>
+        const form = document.getElementById('regForm');
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const data = new URLSearchParams(formData);
+
+            fetch('https://script.google.com/macros/s/AKfycbxWA_uSKxDiMh-26v-CygW4AvGpeykD5SZNE72cQFOgXtztedlY8jpXtpPFvYcdDVo/exec', {
+                method: 'POST',
+                body: data
+            })
+                .then(res => res.text())
+                .then(text => {
+                    document.getElementById("msg").innerText = "Submitted successfully!";
+                    form.reset();
+                })
+                .catch(err => {
+                    document.getElementById("msg").innerText = "Error: " + err;
+                });
+        });
+    </script>
+
+</body>
+
+</html>
