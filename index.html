@@ -10,17 +10,18 @@
     body {
         background-color: #eb9f2d;
 
+
     }
 
     form {
         background-color: #f0a12b;
-        padding: 40px;
+        padding: 30px;
         max-width: 800px;
+        width: 100%;
         border-radius: 30px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         color: #11100f;
-        width: 100%;
-        height: 100%;
+        box-sizing: border-box;
 
     }
 
@@ -32,18 +33,16 @@
 
     input,
     select,
-    textarea {
-        width: 50%;
-        padding: 5px;
-        margin-top: 5px;
-        box-sizing: border-box;
+    label {
+        width: 80%;
+        margin-bottom: 12px;
+        font-size: 18px;
     }
 
     button {
-        margin-top: 20px;
-        margin-left: 300px;
+
         padding: 10px;
-        width: 30%;
+        width: 50%;
         background-color: rgb(15, 174, 202);
         color: white;
         border: none;
@@ -56,47 +55,76 @@
         background-color: #d85e0d;
     }
 
-    h1 {
+    .header {
         color: #f3a11c;
         text-shadow: 5px 5px 4px rgb(17, 15, 15), 0 0 30px rgb(138, 231, 17), 0 0 50px rgb(6, 97, 14);
         text-align: center;
         text-decoration: solid;
-        font-size: 50px;
 
+        animation: swing 1s ease-in-out infinite alternate;
 
+    }
+
+    @keyframes swing {
+        0% {
+            transform: translateX(-30px);
+        }
+
+        100% {
+            transform: translateX(40px);
+        }
     }
 
     .form-container {
         display: flex;
         justify-content: center;
-        /* 水平方向の中央 */
         align-items: center;
-        /* 垂直方向の中央 */
         height: 100vh;
-        /* 画面全体の高さ */
+        padding: 20px;
+        box-sizing: border-box;
+        overflow: auto;
     }
 
-    
+    .img-container {
+        text-align: center;
+        /* 横中央揃え */
+    }
 
-        img.a {
-            float: right;
-            max-width: 100%;
-            height: auto;
+    .img-container img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media screen and (max-width: 600px) {
+        form {
+            padding: 20px;
+            border-radius: 20px;
         }
 
-        img.b {
-            float: left;
-            max-width: 100%;
-            height: auto;
+        input,
+        label,
+        select {
+            font-size: 16px;
         }
+
+
+    }
 </style>
 
 
 <body>
+    <div class="header">
+        <h1>Welcome Hokkaido Thingyan Festival 2025</h1>
+    </div>
 
-    <h1>Welcome Hokkaido Thingyan Festival 2025</h1>
-    <img src="./a00e39165833023.Y3JvcCwxMzc5LDEwNzksNiww.png" alt="" class="a" width="250px">
-    <img src="./a00e39165833023.Y3JvcCwxMzc5LDEwNzksNiww.png" alt="" class="b" width="250px">
+    <div class="img-container">
+        <img src="./a00e39165833023.Y3JvcCwxMzc5LDEwNzksNiww.png" alt="" class="a" width="200">
+        <img src="./a00e39165833023.Y3JvcCwxMzc5LDEwNzksNiww.png" alt="" class="b" width="200">
+
+    </div>
+
+
+
 
     <br>
     <div class="form-container">
