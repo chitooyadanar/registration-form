@@ -8,29 +8,113 @@
 </head>
 <style>
     body {
-        background-color: brown;
-        color: white;
+        background-color: #eb9f2d;
+        
+    }
 
+    form {
+        background-color: #f0a12b;
+        padding: 20px;
+        max-width: 800px;
+        border-radius: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        color: #11100f;
+        width: 500px;
+
+    }
+
+    label {
+        display: block;
+        margin-top: 5px;
+        font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 50%;
+        padding: 5px;
+        margin-top: 5px;
+        box-sizing: border-box;
+    }
+
+    button {
+        margin-top: 20px;
+        margin-left: 300px;
+        padding: 10px;
+        width: 30%;
+        background-color: rgb(15, 174, 202);
+        color: white;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        
+    }
+
+    button:hover {
+        background-color: #d85e0d;
+    }
+
+    h1 {
+        color: #f3a11c;
+        text-shadow: 5px 5px 4px rgb(17, 15, 15), 0 0 30px rgb(138, 231, 17), 0 0 50px rgb(6, 97, 14);
+        text-align: center;
+        text-decoration: solid;
+        font-size: 50px;
+
+
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: center;
+        /* 水平方向の中央 */
+        align-items: center;
+        /* 垂直方向の中央 */
+        height: 100vh;
+        /* 画面全体の高さ */
+    }
+
+    img.a{
+        float: right;
+    }
+
+    img.b{
+        float: left;
     }
 </style>
 
+
 <body>
-    <h2>Welcome Hokkaido Thingyan Festival 2025</h2>
-    <form id="regForm">
-        <label>Date: <input type="date" name="date"></label><br><br>
-        <label>Name: <input type="text" name="name" required></label><br><br>
-        <label>Gender:
-            <select name="gender" required>
-                <option value="">Select</option>
-                <option>Male</option>
-                <option>Female</option>
-            </select>
-        </label><br><br>
-        <label>Phone: <input type="text" name="phone" required></label><br><br>
-        <label>Email: <input type="email" name="email" required></label><br><br>
-        <label>Address: <input type="text" name="address"></label><br><br>
-        <button type="submit">Submit</button>
-    </form>
+
+    <h1>Welcome Hokkaido Thingyan Festival 2025</h1>
+    <img src="./a00e39165833023.Y3JvcCwxMzc5LDEwNzksNiww.png" alt="" class="a" width="300px">
+    <img src="./a00e39165833023.Y3JvcCwxMzc5LDEwNzksNiww.png" alt="" class="b" width="300px">
+
+    <br>
+    <div class="form-container">
+        <form id="regForm">
+            
+            <label>Date:<br><input type="date" name="date"></label><br><br>
+            <label>Name: <br><input type="text" name="name" required></label><br><br>
+            <label>Gender:<br>
+                <select name="gender" required>
+                    <option value="">Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </label><br>
+            <label>Phone: <br><input type="text" name="phone" required></label><br><br>
+            <label>Email: <br><input type="email" name="email" required></label><br><br>
+            <label>Address: <br><input type="text" name="address"></label><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+
+
+    </div>
+
 
     <p id="msg"></p>
 
