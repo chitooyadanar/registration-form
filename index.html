@@ -9,17 +9,18 @@
 <style>
     body {
         background-color: #eb9f2d;
-        
+
     }
 
     form {
         background-color: #f0a12b;
-        padding: 20px;
+        padding: 40px;
         max-width: 800px;
         border-radius: 30px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         color: #11100f;
-        width: 500px;
+        width: 100%;
+        height: 100%;
 
     }
 
@@ -48,7 +49,7 @@
         border: none;
         font-size: 16px;
         cursor: pointer;
-        
+
     }
 
     button:hover {
@@ -75,26 +76,32 @@
         /* 画面全体の高さ */
     }
 
-    img.a{
-        float: right;
-    }
+    
 
-    img.b{
-        float: left;
-    }
+        img.a {
+            float: right;
+            max-width: 100%;
+            height: auto;
+        }
+
+        img.b {
+            float: left;
+            max-width: 100%;
+            height: auto;
+        }
 </style>
 
 
 <body>
 
     <h1>Welcome Hokkaido Thingyan Festival 2025</h1>
-    <img src="./a00e39165833023.Y3JvcCwxMzc5LDEwNzksNiww.png" alt="" class="a" width="300px">
-    <img src="./a00e39165833023.Y3JvcCwxMzc5LDEwNzksNiww.png" alt="" class="b" width="300px">
+    <img src="./a00e39165833023.Y3JvcCwxMzc5LDEwNzksNiww.png" alt="" class="a" width="250px">
+    <img src="./a00e39165833023.Y3JvcCwxMzc5LDEwNzksNiww.png" alt="" class="b" width="250px">
 
     <br>
     <div class="form-container">
         <form id="regForm">
-            
+
             <label>Date:<br><input type="date" name="date"></label><br><br>
             <label>Name: <br><input type="text" name="name" required></label><br><br>
             <label>Gender:<br>
